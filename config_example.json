@@ -1,0 +1,50 @@
+{
+  "_comment": "秒输 语音输入工具配置文件示例",
+  
+  "hotkey": "ctrl_alt",
+  "_hotkey_options": "可选: cmd_r(右Command), ctrl_alt, ctrl_shift, f13, f14, f15",
+  
+  "language": "auto",
+  "_language_options": "可选: auto(自动检测), zh(中文), en(英文), ja(日文), ko(韩文), yue(粤语)",
+  
+  "sample_rate": 16000,
+  "num_threads": 4,
+  
+  "use_itn": true,
+  "_use_itn": "逆文本规范化：将中文数字转为阿拉伯数字，如'一二三'->'123'",
+  
+  "auto_punctuation": true,
+  "_auto_punctuation": "自动添加标点符号",
+  
+  "hotwords": {
+    "_comment": "热词替换：将识别错误的词汇替换为正确的形式",
+    "阿里": "阿里巴巴",
+    "腾讯": "腾讯公司",
+    "人名": "正确的名字",
+    "专业术语": "正确的术语"
+  },
+  
+  "punctuation_map": {
+    "_comment": "标点符号映射：将识别出的标点替换为自定义标点",
+    "，": ",",
+    "。": ".",
+    "！": "!",
+    "？": "?",
+    "；": ";",
+    "：": ":"
+  },
+  
+  "text_rules": [
+    {
+      "_comment": "自定义正则表达式替换规则",
+      "pattern": "  +",
+      "replace": " "
+    },
+    {
+      "pattern": "^\\s+",
+      "replace": ""
+    }
+  ],
+  
+  "model_dir": ""
+}
